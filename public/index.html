@@ -19,4 +19,24 @@
     <noscript>Practice</noscript>
     <div id="root"></div>
   </body>
+  <script>
+    function styledTag(selector) {
+      const styledEL = document.querySelector(selector);
+      return function (csstext) {
+        const cssStyleds = csstext.toString().split(";");
+        const cssKeyValues = cssStyleds.map((styled) => styled.split(":"));
+        cssKeyValues.forEach(([key, value]) => {
+          if (key && value) {
+            styledEL.style[key.trim()] = value.trim();
+          }
+        });
+        return styledEL;
+      };
+    }
+    styledTag("h1")`
+      color:salmon;
+      background: black;
+      padding: 1rem;
+    `;
+  </script>
 </html>
