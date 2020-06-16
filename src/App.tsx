@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, HashRouter as Router } from "react-router-dom";
 import Main from "./pages/Main";
-import Practice from "./pages/Practice";
 import { createGlobalStyle } from "styled-components";
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
     <Router>
       <GlobalCSS />
       <Route exact path="/" component={Main} />
-      <Route exact path="/pr" component={Practice} />
     </Router>
   );
 }
@@ -37,24 +35,6 @@ body {
 a {
   text-decoration: none;
   color: #fff;
-}
-
-.TabDoor{
-  width:2.5rem;
-  height:2.5rem;
-  fill: var(--main-grey)
-}
-
-.Devices{
-  width:5rem;
-  height:5rem;
-  fill: var(--main-grey)
-}
-
-.Price{
-  width:2.5rem;
-  height:2.5rem;
-  fill: var(--main-grey)
 }
 `;
 

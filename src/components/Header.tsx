@@ -27,7 +27,6 @@ export default () => {
 
 //? Header CSS
 //1rem = 17px
-
 const HeaderContainer = styled.div`
   height: 22rem;
   background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 5)), url(${bg});
