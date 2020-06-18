@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { TabDoor, TabPrice, TapDevices } from "./TabIcons";
 import styled from "styled-components";
-import { TabFirst } from "./TabContents";
+import { TabFirst, TabSecond } from "./TabContents";
 
 interface TapIndex {
   index: number;
@@ -32,14 +32,14 @@ export default () => {
         </StyledTab>
       </StyledTabList>
 
-      <StyledPannel>
-        <TabFirst />
-      </StyledPannel>
       <TabPanel>
-        <h1>hi2</h1>
+        <TabFirst />
       </TabPanel>
       <TabPanel>
-        <h1>hi3</h1>
+        <TabSecond />
+      </TabPanel>
+      <TabPanel>
+        <h1>three</h1>
       </TabPanel>
     </Tabs>
   );
@@ -81,13 +81,4 @@ const StyledTab = styled(Tab)`
 const TapText = styled.p`
   font-weight: 500;
   font-size: 10px;
-`;
-
-//Tab Pannel
-const StyledPannel = styled(TabPanel)`
-  display: flex;
-  flex-direction: row;
-  background: var(--main-deep-dark);
-  justify-content: space-between;
-  height: 50vh;
 `;
